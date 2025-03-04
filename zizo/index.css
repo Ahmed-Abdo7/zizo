@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+
+    /*
+    height: 5000px;
+    */
+}
+.myh {
+    color: #2bcd16;
+    font-size: 26px;
+}
+
+
+
+.prof{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: -13px;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    background: #3fa92f; 
+    width: 100%;
+    border-radius: 16px;
+
+    position: sticky; /* بيخلي سوشيال ثابته*/
+    top: 0; /* انت تقوله عايزه ثبت  فين */
+}
+
+.Yusuf-social, 
+.ahmed-social{
+    display:inline-block;
+    margin-bottom: 15px;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center; /* لجعل العناصر في المنتصف */
+    gap: 10px; /* مسافة بين الصورتين */
+}
+
+.container img {
+    width: 45%; /* لضبط حجم الصور */
+    
+    height: auto;
+    max-width: 250px;
+    height: auto;
+    margin-top: 21px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition:2s; 
+}
+
+.img1:hover , .img2:hover{
+    max-width: 275px;
+    height: auto;
+    margin-top: 21px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.zimg1 , .zimg2 ,.zimg3 , .zimg4 {
+    position:absolute;
+    width: 100%;
+    font-size: large;
+    color: rgb(0, 3, 2);
+    background-color: #2bcd16;
+    bottom: 0; /* مش هيبقي تحت خالص , هيتم تعديل الحته دي في الاخر */
+    visibility: hidden;
+    font-size: 30px;
+    text-shadow:1px 1px 9px #000000b0;;
+    font-weight: bold;
+    transition: 0.2s;
+    border-radius: 16px;
+    
+}
+.img4:hover ~ .zimg4 {
+    visibility: visible;
+    font-size: 40px;
+    transition-delay: 0.4s;
+    
+}
+
+.img3:hover ~ .zimg3 {
+    visibility: visible;
+    font-size: 40px;
+    transition-delay: 0.4s;
+    
+}
+
+.img2:hover ~ .zimg2 {
+    visibility: visible;
+    font-size: 40px;
+    transition-delay: 0.4s;
+    
+}
+
+.img1:hover ~ .zimg1 {
+    visibility: visible;
+    font-size: 40px;
+    transition-delay: 0.4s;
+    
+}
