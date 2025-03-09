@@ -27,7 +27,7 @@ body {
     background: #3fa92f; 
     width: 100%;
     border-radius: 16px;
-
+    height: 41px;
     position: sticky; /* بيخلي سوشيال ثابته*/
     top: 0; /* انت تقوله عايزه ثبت  فين */
 }
@@ -40,41 +40,69 @@ body {
 
 
 
-.container {
+.part1{
     display: flex;
     justify-content: center; /* لجعل العناصر في المنتصف */
     gap: 10px; /* مسافة بين الصورتين */
 }
+.container {
+    display: flex;
+    gap: 5px; /* تقليل المسافة بين الصور */
+    background-color: #d2f6e6;
+    padding: 10px;
+    overflow-x: auto; /* تفعيل التمرير الأفقي */
+    white-space: nowrap; /* منع الصور من الانتقال للسطر التالي */
+    scroll-behavior: smooth; /* جعل التمرير سلس */
+    border-radius: 14px;
+}
+
+.container::-webkit-scrollbar {
+    height: 8px; /* جعل الـ Scroll أصغر */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #265720;
+    border-radius: 10px;
+}
 
 .container img {
-    width: 45%; /* لضبط حجم الصور */
-    
+    width: 180px; /* توحيد حجم الصور */
     height: auto;
-    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+}
+
+/* تحسين عرض الصورة اليسرى */
+.left {
+    width: 180px;
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.img1:hover , .img2:hover , .img3:hover {
+    max-width: 205px;
     height: auto;
     margin-top: 21px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition:2s; 
-    cursor: pointer;
-}
-
-.img1:hover , .img2:hover , .img3:hover ,.img4:hover{
-    max-width: 275px;
-    height: auto;
-    margin-top: 21px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     
 }
 
-.zimg1 , .zimg2 ,.zimg3 , .zimg4 {
+.zimg1 , .zimg2 ,.zimg3  {
     position:absolute;
     width: 100%;
     font-size: large;
     color: rgb(0, 3, 2);
     background-color: #2bcd16;
     bottom: 0; /* مش هيبقي تحت خالص , هيتم تعديل الحته دي في الاخر */
+    right: 0;
     visibility: hidden;
     font-size: 30px;
     text-shadow:1px 1px 9px #000000b0;;
@@ -83,12 +111,7 @@ body {
     border-radius: 16px;
     
 }
-.img4:hover ~ .zimg4 {
-    visibility: visible;
-    font-size: 40px;
-    transition-delay: 0.4s;
-    
-}
+
 
 .img3:hover ~ .zimg3 {
     visibility: visible;
@@ -109,4 +132,12 @@ body {
     font-size: 40px;
     transition-delay: 0.4s;
     
+}
+.left{
+    width: 180px;
+    height: 334px;
+    max-width: 250px;
+    margin-top: 21px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
